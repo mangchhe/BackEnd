@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -12,6 +14,19 @@
     str : <%= str %><br>
     number : <%= number %><br>
     dater : <%= date %><br>
+    <input class="time_btn" type="button" value="최신화">
+    <h3 class="time"></h3>
+
 </body>
+
+<script>
+
+    $('.time_btn').click(setInterval(function () {
+        var date = new Date();
+
+        $('.time').html(date);
+    }, 1000));
+
+</script>
 
 </html>
